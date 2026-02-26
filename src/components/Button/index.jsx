@@ -1,11 +1,11 @@
-import { Btn } from "./style";
+import { ButtonContainer } from "./style";
 
-export default function Button({children, handleClick}) {
+export default function Button({label, handleClick, equal, reset}) {
   return (
-    <Btn 
-        className="btn"
+    <ButtonContainer 
+        className={`${equal ? "equal" : ""} ${reset ? "reset" : ""}`}
         onClick={handleClick}>
-        {children}
-    </Btn>
+        {label}
+    </ButtonContainer>
   )
 }
