@@ -11,6 +11,11 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Roboto', Arial, Helvetica, sans-serif;
         width: 100%; 
         height: auto;
+
+        input, button {
+            border: none; 
+            outline: none;
+        }
     }
 `; 
 
