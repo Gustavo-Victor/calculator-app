@@ -3,12 +3,16 @@ import styled from "styled-components";
 export const InputContainer = styled.div`
     width: 100%; 
     height: 75px; 
-    background-color: #191F32;
-    color: #fff; 
+    background-color: ${props => props.theme.screenBackground};
+    color: ${props => props.theme.otherText ? props.theme.otherText : props.theme.secondaryText};
     display: flex;
     align-items: center;
     justify-content: flex-end; 
     font-size: 24px; 
+    width: 80%;
+    max-width: 400px;
+    border-radius: 0.9rem;
+    margin-bottom: 1rem; 
 
     input {
         width: 100%; 

@@ -4,39 +4,50 @@ export const ButtonContainer = styled.button`
     font-size: 14px; 
     padding: 6px 12px; 
     border-radius: 0.25rem;
-    color: #222; 
-    background-color: #ECE4DD;
-    color:  #474747; 
+    color: ${props => props.theme.mainText}; 
+    background-color: ${props => props.theme.regularKeyBackground};
     font-weight: 900;
     height: auto; 
     min-height: 50px;
     cursor: pointer;
-    box-shadow: 0 3px 0 #818181;
+    box-shadow: 0 3px 0 ${props => props.theme.regularKeyShadow};
     transition: all 0.1s ease; 
+
+    &:hover {
+        background-color: ${props => props.theme.regularKeyHover};
+    }
 
     &:active {
         transform: translateY(4px); 
-        box-shadow: 0 1px 0 #818181; 
+        box-shadow: 0 1px 0 ;
     }
 
     &.equal {
-        background-color: #D13F30; 
-        color: #fff; 
-        box-shadow: 0 3px 0 #aa3427;
+        background-color: ${props => props.theme.equalKeyBackground}; 
+        color: ${props => props.theme.detailText ? props.theme.detailText : props.theme.secondaryText}; 
+        box-shadow: 0 3px 0 ${props => props.theme.equalKeyShadow};
 
         &:active {
-            box-shadow: 0 1px 0 #aa3427; 
+            box-shadow: 0 1px 0 ${props => props.theme.equalKeyShadow}; 
+        }
+
+        &:hover {
+            background-color: ${props => props.theme.equalKeyHover};
         }
 
     }
 
     &.reset, &.del {
-        background-color: #647298; 
+        background-color: ${props => props.theme.clearKeyBackground}; 
         color: #fff; 
-        box-shadow: 0 3px 0 #4c5674;
+        box-shadow: 0 3px 0 ${props => props.theme.clearKeyShadow};
 
         &:active {
-            box-shadow: 0 1px 0 #4c5674;
+            box-shadow: 0 1px 0 ${props => props.theme.clearKeyShadow};
+        }
+
+        &:hover {
+            background-color: ${props => props.theme.clearKeyHover};
         }
     }
 

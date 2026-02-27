@@ -3,16 +3,18 @@ import styled from "styled-components";
 export const Container = styled.div`
     width: 100%; 
     height: 100vh;     
-    background-color: #3B4664; 
+    background-color: ${props => props.theme.background}; 
     display: flex;
     align-items: center;
     justify-content: center;
-`; 
+    flex-direction: column;
+    transition: all 0.3s ease;
+    `; 
 
 
 export const Content = styled.div`
-    background-color: #252D44;
-    color: #fff; 
+    background-color: ${props => props.theme.toggleBackground};
+    color: ${props => props.theme.secondaryText}; 
     width: 80%; 
     max-width: 400px; 
     padding: 1.3rem; 

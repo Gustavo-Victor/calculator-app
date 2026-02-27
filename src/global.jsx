@@ -8,13 +8,17 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     body {        
-        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        font-family: 'League Spartan', Arial, Helvetica, sans-serif;
         width: 100%; 
         height: auto;
 
         input, button {
             border: none; 
             outline: none;
+        }
+
+        a {
+            text-decoration: none;
         }
     }
 `; 
