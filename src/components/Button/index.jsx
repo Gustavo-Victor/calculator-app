@@ -1,10 +1,16 @@
 import { ButtonContainer } from "./style";
 
-export default function Button({label, handleClick, equal, reset}) {
+export default function Button({label, handleClick, buttonStyle}) {
+  const handleButtonClick = () => {
+    if(handleClick) {
+      handleClick(label); 
+    }
+  }
+
   return (
-    <ButtonContainer 
-        className={`${equal ? "equal" : ""} ${reset ? "reset" : ""}`}
-        onClick={handleClick}>
+    <ButtonContainer
+        className={`${buttonStyle ? buttonStyle : ""}`}
+        onClick={handleButtonClick}>
         {label}
     </ButtonContainer>
   )

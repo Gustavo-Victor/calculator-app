@@ -1,9 +1,9 @@
 import { InputContainer } from "./style";
 
-export default function Input() {
+export default function Input({value}) {
   return (
     <InputContainer>
-      <input type="text" placeholder="|" />
+      <input type="text" value={value}  readOnly/>
     </InputContainer>
   ); 
 }
