@@ -45,8 +45,8 @@ Usuários são capazes de:
 
 ### Links
 
-- [URL da solução](#)
-- [Aplicação](#)
+- [URL da solução](https://www.frontendmentor.io/solutions/calculator-app-3XxOJqdSbr)
+- [Aplicação](https://calculator-app-two-ruby.vercel.app/)
 
 ## Instalação
 
